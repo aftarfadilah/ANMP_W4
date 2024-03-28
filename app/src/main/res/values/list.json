@@ -1,0 +1,112 @@
+[
+  {
+    "name": "The Lost Dungeon",
+    "genre": "Adventure",
+    "platforms": ["PC", "PlayStation", "Xbox"],
+    "characters": ["Warrior", "Mage", "Rogue"],
+    "settings": {
+      "difficulty": "Medium",
+      "playtime": "Long",
+      "gameSize": "Large"
+    }
+  },
+  {
+    "name": "Galactic Conquest",
+    "genre": "Strategy",
+    "platforms": ["PC", "Mac"],
+    "factions": ["Humans", "Aliens", "Robots"],
+    "settings": {
+      "difficulty": "Hard",
+      "playtime": "Long",
+      "gameSize": "Massive"
+    }
+  },
+  {
+    "name": "Super Kart Racers",
+    "genre": "Racing",
+    "platforms": ["Nintendo Switch", "PlayStation"],
+    "drivers": ["Mario", "Luigi", "Yoshi"],
+    "settings": {
+      "difficulty": "Easy",
+      "playtime": "Short",
+      "gameSize": "Medium"
+    }
+  },
+  {
+    "name": "Medieval Clash",
+    "genre": "Action",
+    "platforms": ["PC", "PlayStation", "Xbox"],
+    "heroes": ["Knight", "Archer", "Sorcerer"],
+    "settings": {
+      "difficulty": "Normal",
+      "playtime": "Medium",
+      "gameSize": "Large"
+    }
+  },
+  {
+    "name": "Space Explorer",
+    "genre": "Simulation",
+    "platforms": ["PC", "Mac"],
+    "ships": ["Explorer Ship", "Cargo Ship", "Fighter Ship"],
+    "settings": {
+      "difficulty": "Medium",
+      "playtime": "Long",
+      "gameSize": "Massive"
+    }
+  },
+  {
+    "name": "Fantasy Quest",
+    "genre": "RPG",
+    "platforms": ["PC", "PlayStation", "Xbox"],
+    "classes": ["Warrior", "Wizard", "Ranger"],
+    "settings": {
+      "difficulty": "Hard",
+      "playtime": "Long",
+      "gameSize": "Huge"
+    }
+  },
+  {
+    "name": "Zombie Apocalypse",
+    "genre": "Survival",
+    "platforms": ["PC", "PlayStation", "Xbox"],
+    "survivors": ["Soldier", "Doctor", "Engineer"],
+    "settings": {
+      "difficulty": "Hard",
+      "playtime": "Medium",
+      "gameSize": "Large"
+    }
+  },
+  {
+    "name": "Underwater Odyssey",
+    "genre": "Adventure",
+    "platforms": ["PC", "PlayStation", "Xbox"],
+    "creatures": ["Mermaid", "Giant Squid", "Shark"],
+    "settings": {
+      "difficulty": "Medium",
+      "playtime": "Long",
+      "gameSize": "Massive"
+    }
+  },
+  {
+    "name": "Cybernetic Warfare",
+    "genre": "FPS",
+    "platforms": ["PC", "PlayStation", "Xbox"],
+    "classes": ["Assault", "Sniper", "Medic"],
+    "settings": {
+      "difficulty": "Normal",
+      "playtime": "Short",
+      "gameSize": "Medium"
+    }
+  },
+  {
+    "name": "City Builder",
+    "genre": "Simulation",
+    "platforms": ["PC", "Mac"],
+    "buildings": ["Residential", "Commercial", "Industrial"],
+    "settings": {
+      "difficulty": "Easy",
+      "playtime": "Long",
+      "gameSize": "Huge"
+    }
+  }
+]
