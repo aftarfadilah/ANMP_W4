@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
 import com.aftarfadilah.week4.R
-import com.aftarfadilah.week4.databinding.FragmentStudentListItemBinding
+import com.aftarfadilah.week4.databinding.StudentListItemBinding
 import com.aftarfadilah.week4.model.Student
 
 /**
@@ -18,14 +18,14 @@ class StudentListViewAdapter(
     val studentList:ArrayList<Student>
 ) : RecyclerView.Adapter<StudentListViewAdapter.StudentViewHolder>() {
 
-    class StudentViewHolder(var binding: FragmentStudentListItemBinding) :
+    class StudentViewHolder(var binding: StudentListItemBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): StudentListViewAdapter.StudentViewHolder {
-        val binding = FragmentStudentListItemBinding.inflate(
+        val binding = StudentListItemBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
         return StudentListViewAdapter.StudentViewHolder(binding)
