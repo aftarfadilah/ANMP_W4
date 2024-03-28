@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.ProgressBar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.aftarfadilah.week4.R
 import com.aftarfadilah.week4.databinding.FragmentStudentDetailBinding
+import com.aftarfadilah.week4.util.loadImage
 import com.aftarfadilah.week4.viewmodel.DetailViewModel
 
 class StudentDetailFragment : Fragment() {
@@ -26,11 +29,13 @@ class StudentDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val studentId = arguments?.getString("studentId")
+
         // Initialize ViewModel
         viewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
 
         // Fetch data
-        viewModel.fetch()
+        viewModel.fetch(studentId ?: "")
 
         // Observe LiveData
         observeViewModel()
@@ -44,6 +49,9 @@ class StudentDetailFragment : Fragment() {
             binding.txtBod.setText(student.bod ?: "")
             binding.txtPhone.setText(student.phone ?: "")
             // You can ignore the button update as per the hint
+            var imageView = binding.imageView3
+            var progressBar = binding.progressBar
+            imageView.loadImage(student.photoUrl, progressBar)
         })
     }
 
