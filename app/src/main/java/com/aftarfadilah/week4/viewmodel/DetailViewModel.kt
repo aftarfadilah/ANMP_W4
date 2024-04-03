@@ -2,17 +2,23 @@ package com.aftarfadilah.week4.viewmodel
 
 import android.app.Application
 import android.content.ContentValues.TAG
+import android.database.Observable
 import android.util.Log
+import android.widget.Button
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
+import com.aftarfadilah.week4.R
 import com.aftarfadilah.week4.model.Student
+import com.aftarfadilah.week4.view.MainActivity
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import java.util.concurrent.TimeUnit
 
 class DetailViewModel(application: Application): AndroidViewModel(application) {
     val loadingLD = MutableLiveData<Boolean>()
@@ -24,6 +30,9 @@ class DetailViewModel(application: Application): AndroidViewModel(application) {
     init {
         queue = Volley.newRequestQueue(getApplication())
     }
+
+
+
 
     fun fetch(id: String) {
 

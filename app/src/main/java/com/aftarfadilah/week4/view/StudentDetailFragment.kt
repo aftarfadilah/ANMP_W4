@@ -1,10 +1,12 @@
 package com.aftarfadilah.week4.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.lifecycle.Observer
@@ -13,6 +15,10 @@ import com.aftarfadilah.week4.R
 import com.aftarfadilah.week4.databinding.FragmentStudentDetailBinding
 import com.aftarfadilah.week4.util.loadImage
 import com.aftarfadilah.week4.viewmodel.DetailViewModel
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
 
 class StudentDetailFragment : Fragment() {
     private lateinit var viewModel: DetailViewModel
@@ -52,6 +58,24 @@ class StudentDetailFragment : Fragment() {
             var imageView = binding.imageView3
             var progressBar = binding.progressBar
             imageView.loadImage(student.photoUrl, progressBar)
+        })
+
+        viewModel.studentLD.observe(viewLifecycleOwner, Observer {
+            var student = it
+            val btnUpdate = view?.findViewById<Button>(R.id.btnUpdate)
+            btnUpdate?.setOnClickListener {
+                Observable.timer(5, TimeUnit.SECONDS)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe {
+                        Log.d("Messages", "five seconds")
+                        MainActivity.showNotification(
+                            student.name.toString(),
+                            "A new notification created",
+                            R.drawable.baseline_boy_24
+                        )
+                    }
+            }
         })
     }
 
